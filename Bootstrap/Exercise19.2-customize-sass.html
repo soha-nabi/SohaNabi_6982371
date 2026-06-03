@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 19.2 - Customize Sass</title>
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Exercise 19.2: Customize Bootstrap with Sass</h1>
+        <p class="lead">This page uses customized Bootstrap variables compiled from Sass.</p>
+        
+        <div class="row mt-5">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Custom Primary Color</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>The primary color has been customized via Sass variables.</p>
+                        <button class="btn btn-primary">Custom Primary Button</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">Custom Border Radius</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>The border radius has been increased to 1rem.</p>
+                        <button class="btn btn-success">Rounded Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h5 class="mb-3">Alert Components with Custom Colors</h5>
+            <div class="alert alert-primary" role="alert">
+                Primary alert with custom color
+            </div>
+            <div class="alert alert-success" role="alert">
+                Success alert with custom color
+            </div>
+            <div class="alert alert-danger" role="alert">
+                Danger alert with custom color
+            </div>
+        </div>
+
+        <div class="mt-5 p-4 bg-light rounded">
+            <h5>Customization Applied</h5>
+            <ul>
+                <li>Primary color changed</li>
+                <li>Border radius increased to 1rem</li>
+                <li>All Bootstrap components use custom variables</li>
+                <li>Recompile with: npm run sass:watch</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

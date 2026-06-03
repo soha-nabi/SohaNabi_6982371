@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 14.1 - Display Visibility</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Exercise 14.1: Display and Visibility</h1>
+        
+        <h5 class="mt-4 mb-3">d-none: Hidden on all screens</h5>
+        <div class="d-none p-3 bg-warning">This element is hidden (d-none)</div>
+
+        <h5 class="mt-4 mb-3">d-md-block: Hidden on small, visible on medium+</h5>
+        <div class="d-md-block p-3 bg-info text-white">
+            This is visible on medium screens and above. Resize your browser to see it hide on smaller screens.
+        </div>
+
+        <h5 class="mt-4 mb-3">d-lg-flex: Hidden on small/medium, visible as flex on large+</h5>
+        <div class="d-lg-flex gap-3 mt-3">
+            <div class="p-3 bg-success text-white flex-fill">Item 1</div>
+            <div class="p-3 bg-success text-white flex-fill">Item 2</div>
+            <div class="p-3 bg-success text-white flex-fill">Item 3</div>
+        </div>
+
+        <h5 class="mt-4 mb-3">Responsive Display Classes</h5>
+        <div class="row">
+            <div class="col-12">
+                <div class="d-sm-none p-3 bg-danger text-white mb-2">
+                    Visible only on extra small screens (d-sm-none)
+                </div>
+                <div class="d-none d-sm-block d-md-none p-3 bg-primary text-white mb-2">
+                    Visible only on small screens (d-none d-sm-block d-md-none)
+                </div>
+                <div class="d-none d-md-block d-lg-none p-3 bg-warning text-dark mb-2">
+                    Visible only on medium screens (d-none d-md-block d-lg-none)
+                </div>
+                <div class="d-none d-lg-block p-3 bg-success text-white">
+                    Visible only on large screens and above (d-none d-lg-block)
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mt-4 mb-3">d-print-none: Hidden on print</h5>
+        <div class="p-3 bg-light">
+            <p>This element is visible on screen but hidden when printed (d-print-none)</p>
+            <button class="btn btn-primary d-print-none">Print this page</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

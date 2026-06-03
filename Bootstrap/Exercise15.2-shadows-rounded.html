@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 15.2 - Shadows Rounded</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Exercise 15.2: Shadows and Rounded Corners</h1>
+        
+        <h5 class="mt-4 mb-3">Shadow Effects</h5>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="p-4 shadow rounded bg-white">
+                    <h6>shadow</h6>
+                    <p>Light shadow effect</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 shadow-sm rounded bg-white">
+                    <h6>shadow-sm</h6>
+                    <p>Very light shadow</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 shadow-lg rounded bg-white">
+                    <h6>shadow-lg</h6>
+                    <p>Large shadow effect</p>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mt-4 mb-3">Card with Shadow and Rounded</h5>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg rounded-pill">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top rounded-top" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Card</h5>
+                        <p class="card-text">This card features shadow-lg and rounded-pill effects.</p>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top rounded-top" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Standard Card</h5>
+                        <p class="card-text">This card features shadow-lg with standard rounded corners.</p>
+                        <button class="btn btn-success">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mt-4 mb-3">Rounded Corner Variations</h5>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="p-4 rounded shadow bg-info text-white text-center">
+                    <p>rounded</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 rounded-pill shadow bg-success text-white text-center">
+                    <p>rounded-pill</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="p-4 rounded-circle shadow bg-warning text-dark text-center" style="width: 150px; height: 150px; display: flex; align-items: center; justify-content: center;">
+                    <p>rounded-circle</p>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mt-4 mb-3">Hover Shadow Effect</h5>
+        <div class="p-4 shadow rounded bg-light transition" style="cursor: pointer;">
+            <h6>Hover me</h6>
+            <p>This element has a shadow effect</p>
+        </div>
+
+        <style>
+            .transition {
+                transition: box-shadow 0.3s ease;
+            }
+            .transition:hover {
+                box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+            }
+        </style>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

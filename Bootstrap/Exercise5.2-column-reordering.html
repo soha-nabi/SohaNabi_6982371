@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5.2 - Column Reordering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Exercise 5.2: Column Reordering</h1>
+        
+        <h5 class="mt-4 mb-3">Default Order (Mobile)</h5>
+        <div class="row mb-4">
+            <div class="col-md-4 border bg-light p-3 mb-2">
+                <span class="badge bg-primary">Order: 1</span> Sidebar
+            </div>
+            <div class="col-md-8 border bg-light p-3 mb-2">
+                <span class="badge bg-primary">Order: 2</span> Content
+            </div>
+        </div>
+
+        <h5 class="mt-4 mb-3">Reordered (Desktop with order-md-*)</h5>
+        <div class="row mb-4">
+            <div class="col-md-4 order-md-2 border bg-info text-white p-3 mb-2">
+                <span class="badge bg-light text-dark">order-md-2</span> Sidebar appears second
+            </div>
+            <div class="col-md-8 order-md-1 border bg-info text-white p-3 mb-2">
+                <span class="badge bg-light text-dark">order-md-1</span> Content appears first
+            </div>
+        </div>
+
+        <h5 class="mt-4 mb-3">Multiple Reorder Example</h5>
+        <div class="row">
+            <div class="col-6 order-last border bg-success text-white p-3 mb-2">
+                <span class="badge bg-light text-dark">order-last</span> Item 1
+            </div>
+            <div class="col-6 order-first border bg-success text-white p-3 mb-2">
+                <span class="badge bg-light text-dark">order-first</span> Item 2
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

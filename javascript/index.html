@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Community Event Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Community Event Portal</h1>
+  </header>
+  <main>
+    <section id="controls">
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="Music">Music</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Meetup">Meetup</option>
+      </select>
+      <label for="searchInput">Search:</label>
+      <input id="searchInput" placeholder="Search by name">
+      <div id="spinner" class="hidden">Loading...</div>
+    </section>
+    <section id="events"></section>
+    <section id="formSection">
+      <h2>Register for an Event</h2>
+      <form id="regForm">
+        <input name="name" placeholder="Your name">
+        <input name="email" placeholder="Your email" type="email">
+        <select name="eventId" id="eventSelect"></select>
+        <button id="registerBtn" type="submit">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

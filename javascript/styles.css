@@ -1,0 +1,11 @@
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;margin:0;padding:0}
+header{background:#2b7a78;color:#fff;padding:16px}
+main{padding:16px}
+#controls{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+#events{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{background:#fff;border-radius:6px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,0.1)}
+.card h3{margin:0 0 8px}
+.card button{margin-right:8px}
+#formSection{margin-top:20px}
+.hidden{display:none}
+#spinner{color:#2b7a78}

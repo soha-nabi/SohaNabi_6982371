@@ -1,0 +1,6 @@
+[
+  {"id":"e1","name":"Community Picnic","date":"2026-06-20","seats":50,"category":"Meetup","location":"Riverside Park","description":"Bring a dish and meet neighbors"},
+  {"id":"e2","name":"Summer Concert","date":"2026-08-01","seats":150,"category":"Music","location":"Central Park","description":"Bands and food trucks"},
+  {"id":"e3","name":"Baking Workshop","date":"2026-07-10","seats":20,"category":"Workshop","location":"Community Center","description":"Hands-on baking class"},
+  {"id":"e4","name":"Past Event","date":"2025-01-01","seats":10,"category":"Meetup","location":"Old Hall","description":"This is in the past"}
+]

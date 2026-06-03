@@ -1,207 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Community Event Portal</title>
+
+    <!-- Embedding Google Fonts (Outfit) to give our portal a clean typography baseline -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Connecting our main external style sheet 'styles.css' -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Demonstrating Internal CSS in the head section. This customizes our promotional offer tag. -->
     <style>
-        :root {
-            --bg: #fae9fa;
-            --primary: #2d6a9f;
-            --secondary: #f05b9d;
-            --surface: #ffffff;
-            --text: #1f2937;
-            --muted: #566270;
-            --border: #d8e2ef;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background: var(--bg);
-            color: var(--text);
-        }
-
-        nav {
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            box-shadow: 0 6px 18px rgba(45, 106, 159, 0.18);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        #welcomeBanner {
-            max-width: 900px;
-            margin: 2rem auto 1.5rem;
-            padding: 2rem;
-            background: linear-gradient(135deg, #ffffff 0%, #f6f9ff 100%);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
-        }
-
-        #welcomeBanner h1 {
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-            font-size: clamp(2rem, 3vw, 3rem);
-        }
-
-        #welcomeBanner p {
-            margin-bottom: 1rem;
-            color: var(--muted);
-            font-size: 1.05rem;
-        }
-
-        .highlight {
-            display: inline-block;
-            background-color: #fff8b3;
-            color: #333;
-            padding: 0.35rem 0.7rem;
-            border-radius: 999px;
-        }
-
-        section {
-            max-width: 860px;
-            margin: 0 auto 1.5rem;
-            padding: 1.25rem 1rem;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-        }
-
-        section h2,
-        section h1 {
-            color: var(--secondary);
-            margin-bottom: 0.75rem;
-        }
-
-        section p {
-            color: var(--muted);
-        }
-
-        .gallery-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        .gallery-table caption {
-            caption-side: top;
-            text-align: left;
+        .internal-css-demo-badge {
+            background-color: #000000;
+            color: #fdfbf7;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
             font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        .gallery-table td {
-            padding: 0.75rem;
-            vertical-align: top;
-            width: 33.33%;
-        }
-
-        .event-image {
-            width: 100%;
-            height: auto;
-            border: 3px solid var(--border);
-            border-radius: 12px;
-            display: block;
-        }
-
-        .event-caption {
-            margin-top: 0.5rem;
-            font-size: 0.95rem;
-            color: var(--muted);
-            text-align: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        @media (max-width: 640px) {
-            body {
-                padding: 0 0.5rem;
-            }
-
-            nav {
-                padding: 0.75rem 1rem;
-            }
-
-            section,
-            #welcomeBanner {
-                margin: 1rem auto;
-                padding: 1.5rem;
-            }
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            margin-bottom: 0.5rem;
+            border: 1px solid #fdfbf7;
         }
     </style>
 </head>
+
 <body>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
-        <a href="help.html" target="_blank">Help</a>
+    <!-- Our custom navigation header. It uses a structured <ul> list, which we will 
+         style in styles.css to strip out standard bullets and format as a horizontal flex menu. -->
+    <nav id="mainNav">
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#news">Community News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="help.html" target="_blank">Help</a></li>
+        </ul>
     </nav>
 
+    <!-- Welcome banner container. The background image and solid fallback color are defined in styles.css. -->
     <div id="welcomeBanner">
-        <h1>Welcome User!</h1>
+        <!-- Main welcome heading. It demonstrates Inline CSS for a slight text shadow effect, 
+             and is selected using its unique ID (#mainHeader) in our external CSS file. -->
+        <h1 id="mainHeader"
+            style="color: linear-gradient(to right, #000000, #2103c9); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); letter-spacing: 1px; text-transform: uppercase;">
+            Welcome User!</h1>
+
+        <!-- This promotional badge uses the .internal-css-demo-badge class defined in our internal <style> block above. -->
+        <span class="internal-css-demo-badge">Exclusive Offer</span>
+
         <p class="highlight">Register now for exciting community events.</p>
         <p>
-            Special offer: <strong style="color: #d13263;">First registration gets free entry!</strong>
+            Special offer: <strong style="color: #000000; text-decoration: underline;">First registration gets free
+                entry!</strong>
         </p>
     </div>
 
     <section id="home">
+        <!-- In styles.css, we've grouped h3 and p element styling to give them custom structural margins. -->
         <h1>Welcome to the Community Event Portal</h1>
         <p>Explore upcoming events in your city with easy registration, event details, and community news.</p>
     </section>
 
     <section id="events">
+        <!-- Our h2 heading elements are customized globally using an Element Selector in styles.css -->
         <h2>Upcoming Events</h2>
-        <p>Music Fest, Food Carnival, Tech Meetup</p>
+        <p>Discover our upcoming interactive programs. Hover over the cards for an elevated depth effect!</p>
 
+        <!-- Using a grid layout to arrange three cards using the class selector (.eventCard). 
+             Each card defines its own margin, paddings, and borders. -->
+        <div class="event-cards-container">
+            <div class="eventCard">
+                <img class="event-card-img" src="musicfest.jpg" alt="Band performing at a music festival" />
+                <div class="event-card-content">
+                    <h3>Live Music Fest</h3>
+                    <p>Experience local bands performing live in the central park amphitheater. Food and drinks
+                        available.</p>
+                    <span class="event-tag">Outdoor</span>
+                </div>
+            </div>
+
+            <div class="eventCard">
+                <img class="event-card-img" src="foodfest.jpg" alt="Visitors enjoying food stalls" />
+                <div class="event-card-content">
+                    <h3>Food Carnival</h3>
+                    <p>A grand culinary journey showcasing delicious street food, crafts, and gourmet eats from local
+                        chefs.</p>
+                    <span class="event-tag">Culinary</span>
+                </div>
+            </div>
+
+            <div class="eventCard">
+                <img class="event-card-img" src="WhatsApp Image 2025-03-23 at 10.54.50_35d7d74d.jpg"
+                    alt="Attendees at a tech meetup" />
+                <div class="event-card-content">
+                    <h3>Tech Workshop</h3>
+                    <p>Boost your coding skills. Interactive hands-on sessions with veteran mentors on CSS3 and modern
+                        UI design.</p>
+                    <span class="event-tag">Educational</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- The gallery table showing past events. It is fully styled with cell paddings and smooth image transitions. -->
         <table class="gallery-table">
             <caption>Past Community Events Gallery</caption>
             <tr>
                 <td>
                     <figure>
-                        <img class="event-image" src="musicfest.jpg" alt="Band performing at a music festival" title="Music Fest" />
+                        <img class="event-image" src="musicfest.jpg" alt="Band performing at a music festival"
+                            title="Music Fest" />
                         <figcaption class="event-caption">Live Music Fest from last summer</figcaption>
                     </figure>
                 </td>
                 <td>
                     <figure>
-                        <img class="event-image" src="foodfest.jpg" alt="Visitors enjoying food stalls" title="Food Carnival" />
+                        <img class="event-image" src="foodfest.jpg" alt="Visitors enjoying food stalls"
+                            title="Food Carnival" />
                         <figcaption class="event-caption">Food Carnival with local vendors</figcaption>
                     </figure>
                 </td>
                 <td>
                     <figure>
-                        <img class="event-image" src="WhatsApp Image 2025-03-23 at 10.54.50_35d7d74d.jpg" alt="Attendees at a tech meetup" title="Tech Meetup" />
+                        <img class="event-image" src="WhatsApp Image 2025-03-23 at 10.54.50_35d7d74d.jpg"
+                            alt="Attendees at a tech meetup" title="Tech Meetup" />
                         <figcaption class="event-caption">Community Tech Meetup workshop</figcaption>
                     </figure>
                 </td>
@@ -209,19 +142,22 @@
             <tr>
                 <td>
                     <figure>
-                        <img class="event-image" src="charity.png" alt="Runners at a charity event" title="Charity Run" />
+                        <img class="event-image" src="charity.png" alt="Runners at a charity event"
+                            title="Charity Run" />
                         <figcaption class="event-caption">Charity Run for local causes</figcaption>
                     </figure>
                 </td>
                 <td>
                     <figure>
-                        <img class="event-image" src="craftfair.png" alt="Craft fair booths and handmade goods" title="Craft Fair" />
+                        <img class="event-image" src="craftfair.png" alt="Craft fair booths and handmade goods"
+                            title="Craft Fair" />
                         <figcaption class="event-caption">Craft Fair showing creativity</figcaption>
                     </figure>
                 </td>
                 <td>
                     <figure>
-                        <img class="event-image" src="park.png" alt="Volunteers cleaning up a park" title="Park Cleanup" />
+                        <img class="event-image" src="park.png" alt="Volunteers cleaning up a park"
+                            title="Park Cleanup" />
                         <figcaption class="event-caption">Park Cleanup event with volunteers</figcaption>
                     </figure>
                 </td>
@@ -229,13 +165,149 @@
         </table>
     </section>
 
+    <!-- Custom Event Schedule Table styled using collapsed borders, custom paddings, 
+         header background colors, zebra-striped row styles, and centered text alignments. -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <p>Make sure to review our detailed schedule to participate in upcoming events.</p>
+
+        <table class="schedule-table">
+            <caption>Official Day Schedule</caption>
+            <thead>
+                <tr>
+                    <th>Time Slot</th>
+                    <th>Activity Name</th>
+                    <th>Venue Location</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 AM - 11:30 AM</td>
+                    <td>Park Cleanup Drive</td>
+                    <td>Central Park Main Gate</td>
+                    <td>Open to All</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM - 02:30 PM</td>
+                    <td>Community Craft Fair</td>
+                    <td>Community Hall A</td>
+                    <td>Limited Entry</td>
+                </tr>
+                <tr>
+                    <td>03:00 PM - 05:00 PM</td>
+                    <td>Charity Run &amp; Rally</td>
+                    <td>East Boulevard Trail</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <td>06:00 PM - 09:00 PM</td>
+                    <td>Live Music Fest</td>
+                    <td>Central Amphitheater</td>
+                    <td>Open to All</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Interactive CSS Box Model Laboratory.
+         We use this to illustrate how display: none (hides element completely and drops its physical footprint) 
+         differs from visibility: hidden (makes the element invisible but leaves its physical blank space behind). -->
+    <section id="box-model-lab">
+        <h2>CSS Box Model &amp; Display Lab</h2>
+        <p>Understand the layout difference between hiding elements in CSS:</p>
+
+        <div class="lab-container">
+            <div class="lab-box box-normal-a">
+                <span>Normal Box A</span>
+            </div>
+
+            <!-- Box B has 'display: none' applied in styles.css. It occupies zero space in the viewport. -->
+            <div class="lab-box box-hidden-display">
+                <span>Box B (display: none)</span>
+            </div>
+
+            <!-- Box C has 'visibility: hidden' applied in styles.css. It remains invisible, but still takes up its physical space. -->
+            <div class="lab-box box-hidden-visibility">
+                <span>Box C (visibility: hidden)</span>
+            </div>
+
+            <div class="lab-box box-normal-d">
+                <span>Normal Box D</span>
+            </div>
+        </div>
+        <div class="lab-legend">
+            <p>💡 <strong>Note:</strong> Box B has <code>display: none</code> and is completely removed from document
+                flow, so Box D moves next to Box A. Box C has <code>visibility: hidden</code>; it is invisible but still
+                reserves its physical space in the layout flow.</p>
+        </div>
+    </section>
+
+    <!-- Multi-Column Layout Section. 
+         Styled using column-count, column-gap, and column-rule properties in styles.css to look like a newsletter. -->
+    <section id="news">
+        <h2>Community News</h2>
+        <p>Catch up on our latest local stories, ecological achievements, and announcements.</p>
+
+        <div class="news-columns">
+            <div class="news-article">
+                <h3>Green City Initiative</h3>
+                <p>Our monthly volunteer cleanup at Central Park brought together over 120 dedicated community members
+                    this weekend. Families, students, and local businesses collaborated to plant over fifty native maple
+                    saplings, repaint aged picnic tables, and collect recyclable waste from the trail paths. Organized
+                    by the Eco-Action Club, this marks our single largest environmental turnout this year.</p>
+            </div>
+
+            <div class="news-article">
+                <h3>Empowering Youth in Tech</h3>
+                <p>In cooperation with the Innovation Hub, we hosted a free frontend development bootcamp this Saturday.
+                    Twenty-five enthusiastic teenagers got hands-on experience building their very first responsive
+                    websites using semantic HTML and CSS Grid layout concepts. Due to overwhelming interest, we are
+                    preparing an advanced CSS3 and Javascript series starting next month.</p>
+            </div>
+
+            <div class="news-article">
+                <h3>Art Walk Returns!</h3>
+                <p>Mark your calendars! The annual Community Craft and Art Fair returns on June 15th at Community Hall
+                    A. This year, we're proud to feature forty-five local painters, ceramicists, sculptors, and
+                    woodworkers. Interactive workshops, street performances, food trucks, and kids' activities will run
+                    all afternoon, ensuring a fun day out for families.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: communityportal@gmail.com</p>
+        <p>Have questions about event registrations or volunteering? Reach out to our organizing team below!</p>
+
+        <!-- Contact form with customized text inputs. 
+             When clicked, these inputs trigger a nice blue glow effect using custom 'focus outlines' defined in styles.css. -->
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="contactName">Full Name</label>
+                    <input type="text" id="contactName" placeholder="e.g. John Doe" required />
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" placeholder="e.g. john@example.com" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contactMsg">Message Description</label>
+                <textarea id="contactMsg" rows="4" placeholder="Type your inquiry here..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="contact-meta">
+            <p>Email direct: <a href="mailto:communityportal@gmail.com">communityportal@gmail.com</a></p>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Community Portal</p>
+        <p>&copy; 2026 Community Event Portal. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
